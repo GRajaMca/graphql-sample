@@ -1,0 +1,19 @@
+scalar JSON
+
+type Rule {
+    ruleName: String
+    ruleConfiguration: JSON
+}
+
+input RuleInput {
+    ruleName: String
+    ruleConfiguration: JSON
+}
+
+type Mutation {
+    createRule(ruleInput: RuleInput): JSON
+}
+
+type Query {
+    getRule: Rule
+}
